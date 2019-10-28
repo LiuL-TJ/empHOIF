@@ -4,7 +4,7 @@
 ##        Cov_Highdim_*.RData, including hat(Omega)^(emp)
 ##        Daubechies_*.RData, the simulated dataset
 ##        Highdim_Nuisance_AC_*.RData, including hat(Omega)^(ac)
-## Output: IF22_Highdim_Ln_***.RData, including psi (the true value), hat(IF1), hat(IF22)(Omega), hat(IF22)(hat(Omega)^(emp)), hat(IF22)(hat(Omega)^(ac)) and hat(IF22)(hat(g))
+## Output: IF22_Highdim_mGCV_***.RData, including psi (the true value), hat(IF1), hat(IF22)(Omega), hat(IF22)(hat(Omega)^(emp)), hat(IF22)(hat(Omega)^(ac)) and hat(IF22)(hat(g))
 
 rm(list = ls())
 ptm <- proc.time()
