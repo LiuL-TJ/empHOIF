@@ -1,3 +1,5 @@
+## The following code is used to evaluate the sample Gram matrix hat(Omega) from the training sample
+
 rm(list = ls())
 
 library(MASS)
@@ -22,18 +24,18 @@ expit <- function (x) exp(x) / (1 + exp(x))
 setwd('~/')
 source('HOIF_Functions_Mat.R')
 
-beta.b <- as.numeric(args[1])
-beta.p <- as.numeric(args[2])
-beta.g <- as.numeric(args[3])
-Rb <- as.numeric(args[4])
-Rp <- as.numeric(args[5])
-Rg <- as.numeric(args[6])
-varY <- as.numeric(args[7])
-filter.number <- as.numeric(args[8])
-filter.number.analysis <- as.numeric(args[9])
-ntr <- as.numeric(args[10])
-d <- as.numeric(args[11])
-k.n <- as.numeric(args[12])
+beta.b <- as.numeric(args[1]) ## Smoothness of outcome regression
+beta.p <- as.numeric(args[2]) ## Smoothness of propensity score
+beta.g <- as.numeric(args[3]) ## Smoothness of density of X
+Rb <- as.numeric(args[4]) ## Constant for outcome regression: Rb = 1 in the simulation shown in the paper
+Rp <- as.numeric(args[5]) ## Constant for outcome regression: Rp = -2 in the simulation shown in the paper
+Rg <- as.numeric(args[6]) ## Constant for outcome regression: Rg = 0.5 in the simulation shown in the paper
+varY <- as.numeric(args[7]) ## The homoscedastic conditional variance of Y|X
+filter.number <- as.numeric(args[8]) ## The number of vanishing moments for the Daubechies wavelets used to generate the data 
+filter.number.analysis <- as.numeric(args[9]) ## The number of vanishing moments for the Daubechies wavelets used to analyze the data
+ntr <- as.numeric(args[10]) ## Number of training samples
+d <- as.numeric(args[11]) ## Dimension of the covariates X
+k.n <- as.numeric(args[12]) ## The number of basis used to construct the second order influence function
 
 M.n <- log2(k.n - 4)
 
