@@ -1,5 +1,8 @@
 ## The following code is used to simulate L = 10000*1000 = 10^(7) samples from the estimated density g, in order to evaluate 
 ## the numerical integration hat(Omega)^(ac)
+## Input: Highdim_Nuisance_Ln_***.RData, which includes the nuisance function estimators by linear model and the kernel density
+##        estimator hat(g) using kde with bandwidth selected by cross-validation
+## Output: Highdim_Nuisance_AC_***.RData, which includes hat(Omega)^(ac) for either the functional E[Y, A | X] or E[A p(X) Y]
 
 rm(list = ls())
 
