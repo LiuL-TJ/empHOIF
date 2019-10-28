@@ -1,3 +1,11 @@
+## The following code is the key part of computing the three different versions of IF22 when the nuisance working models are generalized additive models
+## Input: Highdim_Nuisance_Ln_*.RData, including hat(g) using kde
+##        Highdim_Nuisance_mGCV_*.RData, including the nuisance function estimators using GAM
+##        Cov_Highdim_*.RData, including hat(Omega)^(emp)
+##        Daubechies_*.RData, the simulated dataset
+##        Highdim_Nuisance_AC_*.RData, including hat(Omega)^(ac)
+## Output: IF22_Highdim_Ln_***.RData, including psi (the true value), hat(IF1), hat(IF22)(Omega), hat(IF22)(hat(Omega)^(emp)), hat(IF22)(hat(Omega)^(ac)) and hat(IF22)(hat(g))
+
 rm(list = ls())
 ptm <- proc.time()
 library(MASS)
