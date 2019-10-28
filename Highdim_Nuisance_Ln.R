@@ -1,3 +1,7 @@
+## The following code is used to estimate the nuisance functions by lm and density g by kde
+## Input: Daubechies_***.RData, the simulated dataset
+## Output: Highdim_Nuisance_Ln_***.RData, including the nuisance function estimators by lm and hat(g) by kde
+
 rm(list = ls())
 
 library(MASS)
