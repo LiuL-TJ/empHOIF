@@ -5,13 +5,7 @@ library(wavethresh)
 library(splines)
 library(Rcpp)
 library(RcppArmadillo)
-library(parallel)
-library(doMC)
-library(foreach)
-library(doSNOW)
-library(doParallel)
 library(fda)
-library(inline)
 library(RInside)
 library(RcppParallel)
 library(iterpc)
@@ -25,8 +19,8 @@ args = commandArgs(trailingOnly = TRUE)
 
 expit <- function (x) exp(x) / (1 + exp(x))
 
-setwd('/net/rcstorenfs02/ifs/rc_labs/robins_lab/users/linliu824/HOIF/Empirical-HOIF/Revision/')
-source('/net/rcstorenfs02/ifs/rc_labs/robins_lab/users/linliu824/HOIF/src/HOIF_Functions_Mat.R')
+setwd('~/')
+source('HOIF_Functions_Mat.R')
 
 beta.b <- as.numeric(args[1])
 beta.p <- as.numeric(args[2])
@@ -84,4 +78,3 @@ for (i in 1:100) {
 svd.sigma.tr <- svd(Sigma_train, LINPACK = TRUE)
 
 save(svd.sigma.tr, filter.cols, file = paste0('Cov_Highdim_', beta.b, '_', beta.p, '_', beta.g, '_', Rb, '_', Rp, '_', Rg, '_', varY, '_', filter.number, '_', filter.number.analysis, '_', ntr, '_', d, '_', k.n, '.RData'))
-
