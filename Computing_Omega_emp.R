@@ -1,4 +1,4 @@
-## The following code is used to evaluate the sample Gram matrix hat(Omega) from the training sample
+## The following code is used to evaluate the sample Gram matrix hat(Omega)^(emp) from the training sample
 
 rm(list = ls())
 
